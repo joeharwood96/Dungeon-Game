@@ -1,0 +1,78 @@
+<html>
+<head>
+    <title>Dungeon Explorer</title>
+    <link rel="icon" type="image/icon" href="" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.css" />
+    <!--Link jquery mobile-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!--Import jquery for the web-->
+    <script src="socket.io/socket.io.js"></script>
+    <script src="DungeonClient.js"></script>
+</head>
+
+<body>
+<!--Dungeon area holds the score, username and canvas of the game-->
+<div class="Dungeon">
+    <img src="images/logo.png" alt="" width="502" height="100">
+    <div id="username"></div>
+    <div id="score"></div>
+
+    <canvas width="400" height="400">
+        Your browser has no Canvas support!
+    </canvas>
+
+<div id="arrowControls">
+    <label>Controls: </label>
+    <button type="button" class="btn btn-light" id="up"><i class="fas fa-angle-up" id="arrow"></i></button>
+    <button type="button" class="btn btn-light" id="left"><i class="fas fa-angle-left" id="arrow"></i></button> 
+    <button type="button" class="btn btn-light" id="right"><i class="fas fa-angle-right" id="arrow"></i></button>
+    <button type="button" class="btn btn-light" id="down"><i class="fas fa-angle-down" id="arrow"></i></button>
+    <label id="arrowKey">Or Arrow Keys</label>
+</div> 
+</div>
+
+<!--The highscore area holds the highscore table-->
+<div class="highscore">
+
+<h1>Highscore</h1>
+<table class="table table-dark">
+    <thead>
+      <tr style="color: black; background: #BC2020;">
+        <th scope="col">#</th>
+        <th scope="col">username</th>
+        <th scope="col">Score</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row" style="color: gold;">1st</th>
+        <td id="user1st"></td>
+        <td id="score1st"></td>
+      </tr>
+      <tr>
+        <th scope="row" style="color: silver;">2nd</th>
+        <td id="user2nd"></td>
+        <td id="score2nd"></td>
+      </tr>
+      <tr>
+        <th scope="row" style="color: #cd7f32;">3rd</th>
+        <td id="user3rd"></td>
+        <td id="score3rd"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<script src="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
+<!--Import jquery for mobile-->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+<!--Import bootstrap-->
+</body>
+
+</html>
